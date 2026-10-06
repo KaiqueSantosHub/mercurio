@@ -1,0 +1,412 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
+body {
+    font-family: "Nunito", "Segoe UI", Arial, sans-serif;
+    font-size: 1.05rem;
+    background: #FEFFD6;
+    color: #010002;
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: #010002;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #E85A50;
+}
+
+.topo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 12px 6%;
+    background: #010002;
+}
+
+.topo-logo {
+    font-family: "Fredoka", "Trebuchet MS", sans-serif;
+    font-size: 1.6rem;
+    color: #010002;
+    background: #E85A50;
+    padding: 0 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.topo-logo:hover {
+    background: #FDF37A;
+    color: #010002;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #FEFFD6;
+    font-weight: 400;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #FDF37A;
+}
+
+.capa {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 70px 8%;
+    background: #E85A50;
+    border-bottom: 5px solid #010002;
+}
+
+.capa-texto {
+    max-width: 620px;
+    animation: entrar 0.9s ease both;
+}
+
+.capa-disciplinas {
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.capa h1 {
+    font-family: "Fredoka", "Trebuchet MS", sans-serif;
+    font-size: 5rem;
+    line-height: 1.05;
+    font-weight: 700;
+}
+
+.capa-subtitulo {
+    font-size: 1.2rem;
+    margin: 10px 0 24px;
+}
+
+.dados-aluno {
+    list-style: none;
+    background: #FEFFD6;
+    border: 3px solid #010002;
+    box-shadow: 6px 6px 0 #010002;
+    padding: 16px 22px;
+}
+
+.gota {
+    width: 400px;
+    flex-shrink: 0;
+    background: #FDF37A;
+    border: 4px solid #010002;
+    border-radius: 20%;
+    height: 350px;
+    box-shadow: 8px 8px 0 #010002;
+}
+
+.secao {
+    padding: 70px 8%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.secao-clara {
+    max-width: none;
+    background: #5BB7B6;
+    border-top: 5px solid #010002;
+    border-bottom: 5px solid #010002;
+}
+
+#usos {
+    background: #FDF37A;
+}
+
+.secao-clara > * {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.secao h2 {
+    font-family: "Fredoka", "Trebuchet MS", sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 32px;
+    padding: 2px 20px;
+    background: #E85A50;
+    border: 3px solid #010002;
+    box-shadow: 5px 5px 0 #010002;
+    display: inline-block;
+}
+
+.secao h3 {
+    font-family: "Fredoka", "Trebuchet MS", sans-serif;
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.secao p {
+    margin-bottom: 14px;
+}
+
+.caracteristicas-grade, .ocorrencia-grade {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 36px;
+}
+
+.ocorrencia-grade {
+    grid-template-columns: 1fr 1.3fr;
+}
+
+.figura {
+    background: #FDF37A;
+    padding: 16px;
+    border: 3px solid #010002;
+    box-shadow: 6px 6px 0 #010002;
+    overflow: hidden;
+}
+
+.figura figcaption {
+    font-size: 0.85rem;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+.propriedades {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 22px;
+    margin-top: 16px;
+}
+
+.propriedades li {
+    background: #5BB7B6;
+    padding: 16px 18px;
+    border: 3px solid #010002;
+    box-shadow: 5px 5px 0 #010002;
+}
+
+.propriedade-titulo {
+    display: block;
+    font-family: "Fredoka", "Trebuchet MS", sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.linha-tempo {
+    border-left: 5px solid #010002;
+    padding-left: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+
+.marco {
+    position: relative;
+    background: #FEFFD6;
+    padding: 18px 24px;
+    border: 3px solid #010002;
+    box-shadow: 5px 5px 0 #010002;
+}
+
+.marco::before {
+    content: "";
+    position: absolute;
+    left: -49px;
+    top: 22px;
+    width: 20px;
+    height: 20px;
+    background: #E85A50;
+    border: 4px solid #010002;
+    border-radius: 50%;
+}
+
+.marco p {
+    margin-bottom: 0;
+}
+
+.destaque {
+    background: #E85A50;
+    padding: 16px 20px;
+    border: 3px solid #010002;
+    box-shadow: 5px 5px 0 #010002;
+}
+
+.imagem-usos {
+    width: 100%;
+    max-height: 220px;
+    object-fit: cover;
+    margin-bottom: 32px;
+    border: 3px solid #010002;
+    box-shadow: 6px 6px 0 #010002;
+}
+
+.usos-grade {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 26px;
+}
+
+.uso {
+    background: #5BB7B6;
+    padding: 22px;
+    border: 3px solid #010002;
+    box-shadow: 5px 5px 0 #010002;
+}
+
+.uso p {
+    margin-bottom: 0;
+}
+
+.riscos-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.pote {
+    border-radius: 20%;
+}
+
+.risco {
+    background: #FDF37A;
+    padding: 20px 26px;
+    border: 3px solid #010002;
+    border-left: 12px solid #E85A50;
+    box-shadow: 5px 5px 0 #010002;
+}
+
+.risco p {
+    margin-bottom: 0;
+}
+
+.fontes-lista {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.fontes-lista li {
+    background: #FEFFD6;
+    padding: 14px 20px;
+    border: 3px solid #010002;
+    box-shadow: 5px 5px 0 #010002;
+    word-break: break-word;
+}
+
+.professores-grade {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.professor {
+    width: 220px;
+    text-align: center;
+}
+
+.professor img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #010002;
+    box-shadow: 6px 6px 0 #E85A50;
+}
+
+.professor figcaption {
+    margin-top: 16px;
+    font-family: "Fredoka", "Trebuchet MS", sans-serif;
+    font-size: 1.5rem;
+}
+
+.rodape {
+    background: #010002;
+    color: #FEFFD6;
+    text-align: center;
+    padding: 26px 6%;
+    font-size: 0.9rem;
+}
+
+@keyframes entrar {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 800px) {
+    .topo {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .menu {
+        justify-content: center;
+    }
+    .capa {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 50px 6%;
+    }
+    .capa h1 {
+        font-size: 3.4rem;
+    }
+    .gota {
+        width: 190px;
+        height: 190px;
+    }
+    .dados-aluno {
+        text-align: left;
+    }
+    .secao {
+        padding: 50px 6%;
+    }
+    .secao h2 {
+        font-size: 1.7rem;
+    }
+    .caracteristicas-grade, .ocorrencia-grade {
+        grid-template-columns: 1fr;
+    }
+    .professores-grade {
+        justify-content: center;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}
